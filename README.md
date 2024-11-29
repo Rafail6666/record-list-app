@@ -1,70 +1,64 @@
-# Getting Started with Create React App
+# Record List Application
+## Описание
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Это приложение для создания и управления списком записей (To-Do List). Оно позволяет вам:
 
-## Available Scripts
+    Добавлять новые записи.
+    Фильтровать записи по статусу (все, выполненные, невыполненные).
+    Изменять статус записи на "выполнено" или "невыполнено" при клике.
+    Удалять записи.
+    Просматривать количество выполненных и невыполненных записей.
 
-In the project directory, you can run:
+## Требования
 
-### `npm start`
+Для работы приложения вам понадобится:
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+    Node.js версии 16 или выше.
+    Docker (для запуска приложения в контейнере).
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Установка и запуск
+### 1. Клонирование репозитория
 
-### `npm test`
+Клонируйте репозиторий на вашу машину:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+```bash
+git clone <url-репозитория>
+cd record-list-app
+```
 
-### `npm run build`
+### 2. Установка зависимостей
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Если вы не хотите использовать Docker, установите зависимости локально с помощью NPM:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+```bash
+npm install
+```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### 3. Запуск приложения
+Локальный запуск:
 
-### `npm run eject`
+После установки зависимостей запустите приложение с помощью команды:
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+```bash
+npm start
+```
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Приложение будет доступно по адресу http://localhost:3000.
+Запуск через Docker:
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+Если вы предпочитаете использовать Docker, выполните следующие шаги:
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+    1.Соберите и запустите контейнер:
 
-## Learn More
+    ```bash
+    docker-compose up --build
+    ```
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+    2.Приложение будет доступно по адресу http://localhost:3000.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+### 4. Как использовать
 
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+    1.Добавление новой записи: Введите текст в поле ввода и нажмите кнопку "Добавить", чтобы добавить новую запись.
+    2.Изменение статуса записи: Нажмите на текст записи, чтобы переключить её статус между "выполнено" и "невыполнено".
+    3.Фильтрация задач: Используйте кнопки "Все", "Выполненные", "Невыполненные", чтобы фильтровать список задач по статусу.
+    4.Удаление записи: Нажмите кнопку "Удалить" рядом с записью, чтобы удалить её.
